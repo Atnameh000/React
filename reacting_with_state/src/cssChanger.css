@@ -1,0 +1,13 @@
+
+.picture{
+    display: flex;
+    border: 10px solid lightskyblue;
+    border-radius: 8px;
+    margin-left: 14.833%;
+}
+
+.picture-active{
+    display: flex;
+    margin-left: 16.5%;
+    border-radius: 8px;
+}
