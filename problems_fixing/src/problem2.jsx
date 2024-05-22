@@ -19,6 +19,7 @@ import PackingList from "./PackingList";
 export default function Display(){
     const [items, setItems] = useState(itemList)
     const [nextid, setNextid] = useState(3)
+    const [value, setValue] = useState(0)
 
     function handleOnAdd(value){
      setNextid(nextid+1)
@@ -31,12 +32,22 @@ export default function Display(){
     ])
     }
 
+    function handleOnDelete(item){
+        setItems(items.filter(i => (
+            i.id !== item.id
+        )))
+    }
+
+    function handleOnCan(val){
+        setValue(val)
+    }
+
     return(
         <div>
             <AddItem onAdd={handleOnAdd}/>
-            <PackingList items={items} />
+            <PackingList items={items} onDelete={handleOnDelete} onCan={handleOnCan}/>
             <hr/>
-            <h4> out of</h4>
+            <h4>{value} selected</h4>
         </div>
     );
 }

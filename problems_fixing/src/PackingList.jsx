@@ -1,16 +1,32 @@
 import { useState } from "react";
 import './Paking.css'
 
-export default function PackingList({items}){
+export default function PackingList({items,onDelete,onCan}){
+    const [val, setVal] = useState(0)
+    let isclick = false
+    
     return(
         <div>
                 { items.map(item =>(
                     <label key={item.id}>
-                        <input type="checkbox"/>
+                        <input 
+                        type="checkbox"
+                        onClick={() => {
+                          setIsclick(!isclick)
+                          isclick? setVal(val - 1) : setVal(val + 1)
+                          onCan(val)
+                        }}
+                        />
                            {' '}
                            <h2>{item.title}</h2>
                            {' '}
-                        <button>Delete</button>
+                        <button
+                           onClick={() =>{
+                            isclick && setVal(val - 1)
+                            onDelete(item)
+                            onCan(val)
+                           }}
+                        >Delete</button>
                         <br/>
                     </label>
                 ))}
