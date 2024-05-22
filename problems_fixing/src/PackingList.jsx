@@ -2,8 +2,11 @@ import { useState } from "react";
 import './Paking.css'
 
 export default function PackingList({items,onDelete,onCan}){
+    const itemList = items;
+    const [isclick, setIsclick] = useState(itemList.map(item =>(
+        {id: item.id, click: false}
+    )))
     const [val, setVal] = useState(0)
-    let isclick = false
     
     return(
         <div>
@@ -12,8 +15,22 @@ export default function PackingList({items,onDelete,onCan}){
                         <input 
                         type="checkbox"
                         onClick={() => {
-                          setIsclick(!isclick)
-                          isclick? setVal(val - 1) : setVal(val + 1)
+                          setIsclick(isclick.map(iscli =>{
+                                if(iscli.id === item.id && !iscli.click){
+                                     console.log(isclick)
+                                     return {...iscli, click: true}
+                                }
+                                if(iscli.id === item.id && iscli.click){
+                                    console.log(isclick)
+                                    return {...iscli, click: false}
+                               }
+                                return iscli
+                        }))
+                        isclick.map(iscli =>{
+                            if(iscli.id === item.id){
+                                iscli.click? setVal(val - 1) : setVal(val + 1)
+                           }
+                        })
                           onCan(val)
                         }}
                         />
@@ -22,7 +39,9 @@ export default function PackingList({items,onDelete,onCan}){
                            {' '}
                         <button
                            onClick={() =>{
-                            isclick && setVal(val - 1)
+                            isclick.map(iscli =>{
+                                iscli.click && setVal(val - 1)
+                              })
                             onDelete(item)
                             onCan(val)
                            }}
