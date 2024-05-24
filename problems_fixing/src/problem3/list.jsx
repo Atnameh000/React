@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function List({items}){
     const itemList = items.slice()
     const [it, setIt] = useState(itemList)
+    const [val, setVal] = useState(0)
 
 
     function handleOnClick(item){
@@ -20,6 +21,7 @@ export default function List({items}){
             <li key={item.id}>
                 <div
                   onClick={() =>{
+                    item.click? setVal(val - 1) : setVal(val + 1)
                     handleOnClick(item)
                 }}
                  style={{
@@ -30,6 +32,7 @@ export default function List({items}){
                     className="element"
                     type="checkbox"
                     checked= {item.click}
+                    onChange={() => item.click? setVal(val - 1) : setVal(val + 1)}
                     />
                     <h2
                     style={{
@@ -40,6 +43,7 @@ export default function List({items}){
             </li>
           ))}
        </ul>
+       <h1>Total no of selection is: {val}</h1>
     </>
    );
 }
