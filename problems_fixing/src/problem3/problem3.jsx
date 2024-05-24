@@ -10,7 +10,28 @@ const items = [{
     id: 1,
     title: 'hello my name is ram',
     click: false
-}]
+},
+{
+    id: 2,
+    title: 'hello my name is hemanta',
+    click: false
+},
+{
+    id: 3,
+    title: 'hello my name is ram',
+    click: false
+},
+{
+    id: 4,
+    title: 'hello my name is hemanta',
+    click: false
+},
+{
+    id: 5,
+    title: 'hello my name is ram',
+    click: false
+}
+]
 
 export default function Sate(){
     return(
