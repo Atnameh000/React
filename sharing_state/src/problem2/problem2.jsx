@@ -29,7 +29,7 @@ export default function Dog(){
     const [items, setItems] = useState(itemlist)
 
     function handleOnChange(e){
-      setItems(items.filter(item => item.title === e.target.value))
+      setItems(items.filter(item => item.title.includes(e.target.value)))
     }
     return(
         <>
