@@ -2,11 +2,20 @@ import { useState } from "react";
 
 export default function Display(){
     const [isclick, setIsclick] = useState(false)
-    const [text, setText] = useState('')
+    if(isclick){
+        return(
+            <div>
+               <h1>the fuck you are</h1>
+               <Comp key='comp'/>
+               <button
+                 onClick={e => setIsclick(!isclick)}
+               >hide hint</button>
+            </div>
+        );
+    }
     return(
         <div>
-           {isclick && <h1>the fuck you are</h1>}
-           <Comp />
+           <Comp key='comp'/>
            <button
              onClick={e => setIsclick(!isclick)}
            >show hint</button>
@@ -15,9 +24,13 @@ export default function Display(){
 }
 
 function Comp(){
+    const [text, setText] = useState('')
     return(
         <div>
-           <textarea />
+           <textarea 
+             value={text}
+             onChange={e => setText(e.target.value)}
+           />
         </div>
     );
 }
