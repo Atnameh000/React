@@ -31,10 +31,6 @@ function Comp(){
              value={text}
              onChange={e => setText(e.target.value)}
            />
-           <textarea 
-             value={text}
-             onChange={e => setText(e.target.value)}
-           />
         </div>
     );
 }
