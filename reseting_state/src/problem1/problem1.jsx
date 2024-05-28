@@ -27,6 +27,10 @@ function Comp(){
     const [text, setText] = useState('')
     return(
         <div>
+          <textarea 
+             value={text}
+             onChange={e => setText(e.target.value)}
+           />
            <textarea 
              value={text}
              onChange={e => setText(e.target.value)}
