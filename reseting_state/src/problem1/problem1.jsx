@@ -5,7 +5,7 @@ export default function Display(){
     if(isclick){
         return(
             <div>
-               <h1>Hint: Capital of nepal</h1>
+               <h1>Hint: ?</h1>
                <Comp key='comp'/>
                <button
                  onClick={e => setIsclick(!isclick)}
