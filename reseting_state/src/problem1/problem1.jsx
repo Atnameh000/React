@@ -7,9 +7,6 @@ export default function Display(){
             <div>
                <h1>Hint: My name is Hemanta</h1>
                <Comp key='comp'/>
-               <button
-                 onClick={e => setIsclick(!isclick)}
-               >hide hint</button>
             </div>
         );
     }
