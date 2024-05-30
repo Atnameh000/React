@@ -5,7 +5,6 @@ import './App.css'
 import Display from './problem1/problem1'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
