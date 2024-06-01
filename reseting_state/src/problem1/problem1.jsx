@@ -18,7 +18,7 @@ export default function Display(){
       <Comp key='comp'/>
       <button
         onClick={e => setIsclick(!isclick)}
-      ></button>
+      >show hint</button>
    </div>
     );
 }
