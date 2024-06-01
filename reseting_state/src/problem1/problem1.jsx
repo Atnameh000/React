@@ -18,13 +18,13 @@ export default function Display(){
       <Comp key='comp'/>
       <button
         onClick={e => setIsclick(!isclick)}
-      >show hint</button>
+      ></button>
    </div>
     );
 }
 
 function Comp(){
-    // const [text, setText] = useState('')
+    const [text, setText] = useState('')
     return(
         <div>
           <textarea 
