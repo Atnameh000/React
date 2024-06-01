@@ -24,7 +24,7 @@ export default function Display(){
 }
 
 function Comp(){
-    const [text, setText] = useState('')
+    // const [text, setText] = useState('')
     return(
         <div>
           <textarea 
