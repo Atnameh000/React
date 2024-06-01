@@ -13,14 +13,14 @@ export default function Display(){
             </div>
         );
     }
-  //   return(
-  //     <div>
-  //     <Comp key='comp'/>
-  //     <button
-  //       onClick={e => setIsclick(!isclick)}
-  //     >show hint</button>
-  //  </div>
-  //   );
+    return(
+      <div>
+      <Comp key='comp'/>
+      <button
+        onClick={e => setIsclick(!isclick)}
+      >show hint</button>
+   </div>
+    );
 }
 
 function Comp(){
