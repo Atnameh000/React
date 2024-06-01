@@ -29,7 +29,7 @@ function Comp(){
         <div>
           <textarea 
              value={text}
-             onChange={e => setText(e.target.value)}
+            //  onChange={e => setText(e.target.value)}
            />
         </div>
     );
