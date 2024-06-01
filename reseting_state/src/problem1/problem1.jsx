@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Display(){
-    const [isclick, setIsclick] = useState(false)
+    // const [isclick, setIsclick] = useState(false)
     if(isclick){
         return(
             <div>
