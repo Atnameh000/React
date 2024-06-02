@@ -6,10 +6,10 @@ export default function Display(){
         return(
             <div>
                <h1>Hint: My name is Hemanta</h1>
-               <Comp key='comp'/>
+               {/* <Comp key='comp'/>
                <button
                  onClick={e => setIsclick(!isclick)}
-               >hide hint</button>
+               >hide hint</button> */}
             </div>
         );
     }
