@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Display(){
     const [isclick, setIsclick] = useState(false)
-    // if(isclick){
+    if(isclick){
         return(
             <div>
                <h1>Hint: My name is Hemanta</h1>
