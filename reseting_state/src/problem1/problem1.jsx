@@ -13,8 +13,8 @@ export default function Display(){
             </div>
         );
     }
-  //   return(
-  //     <div>
+    return(
+      <div>
       <Comp key='comp'/>
       <button
         onClick={e => setIsclick(!isclick)}
