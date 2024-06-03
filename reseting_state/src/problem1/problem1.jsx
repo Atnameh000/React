@@ -8,11 +8,11 @@ export default function Display(){
     //            <h1>Hint: My name is Hemanta</h1>
     //            <Comp key='comp'/>
     //            <button
-    //              onClick={e => setIsclick(!isclick)}
-    //            >hide hint</button>
-    //         </div>
-    //     );
-    // }
+                 onClick={e => setIsclick(!isclick)}
+               >hide hint</button>
+            </div>
+        );
+    }
     return(
       <div>
       <Comp key='comp'/>
