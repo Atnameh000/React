@@ -3,11 +3,11 @@ import { useState } from "react";
 export default function Display(){
     const [isclick, setIsclick] = useState(false)
     // if(isclick){
-    //     return(
-    //         <div>
-    //            <h1>Hint: My name is Hemanta</h1>
-    //            <Comp key='comp'/>
-    //            <button
+        return(
+            <div>
+               <h1>Hint: My name is Hemanta</h1>
+               <Comp key='comp'/>
+               <button
                  onClick={e => setIsclick(!isclick)}
                >hide hint</button>
             </div>
